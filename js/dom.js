@@ -51,7 +51,6 @@ var vbtn = document.getElementById("btn")
     var vnom = document.getElementById("nom")
     var vtitle = document.getElementById("tnom")
     vtitle.innerText = vnom.value
-
 }
  */
 var vnom = document.getElementById("nom")
@@ -61,3 +60,14 @@ vnom.onkeyup = function () {
     vtitle.innerText = vnom.value
 
 }
+
+/* var handle = setTimeout(function () {
+    alert(545454)
+}, 5000) */
+var w = 100
+
+var handle2 = setInterval(function () {
+    vnom.style.width = w + "px"
+    w += 100
+    if (w == 1000) clearInterval(handle2)
+}, 500)
